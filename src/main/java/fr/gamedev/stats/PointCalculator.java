@@ -35,6 +35,19 @@ public class PointCalculator {
         int result = 0;
 
         //TODO à implementer
+        FscSlice slice = getValidSlice(slices, dataSource);
+        
+        double notRounded = operator.apply(basePoints, slice.getWeight());
+        
+        if(isFirstTime) {
+        	notRounded += firstTimeBonus;
+        }
+        if(roundMode.equals(RoundingMode.UP)){
+        	result = (int)Math.ceil(result); 
+        }else {
+        	result = (int)Math.floor(result);
+        }
+        
 
         return result;
     }
