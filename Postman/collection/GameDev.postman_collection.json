@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "78614745-963c-47c1-bafd-d48dd5583031",
+		"name": "GameDev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22136745"
+	},
+	"item": [
+		{
+			"name": "requestRules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/stats/fsc?currentPoint={{currentPoint}}&isFirstTime={{isFirstTime}}&basePoints={{basePoints}}&afscRuleName={{afscRuleName}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stats",
+						"fsc"
+					],
+					"query": [
+						{
+							"key": "currentPoint",
+							"value": "{{currentPoint}}"
+						},
+						{
+							"key": "isFirstTime",
+							"value": "{{isFirstTime}}"
+						},
+						{
+							"key": "basePoints",
+							"value": "{{basePoints}}"
+						},
+						{
+							"key": "afscRuleName",
+							"value": "{{afscRuleName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requestHelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
