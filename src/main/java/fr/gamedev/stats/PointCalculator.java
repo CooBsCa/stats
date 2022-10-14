@@ -39,13 +39,14 @@ public class PointCalculator {
         
         double notRounded = operator.apply(basePoints, slice.getWeight());
         
-        if(isFirstTime) {
-        	notRounded += firstTimeBonus;
-        }
+        
         if(roundMode.equals(RoundingMode.UP)){
-        	result = (int)Math.ceil(result); 
+        	result = (int)Math.ceil(notRounded); 
         }else {
-        	result = (int)Math.floor(result);
+        	result = (int)Math.floor(notRounded);
+        }
+        if(isFirstTime) {
+        	result += firstTimeBonus;
         }
         
 
